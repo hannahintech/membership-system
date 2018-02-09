@@ -11,9 +11,7 @@ dl.dl-horizontal
 	else
 		dd –
 	dt Minimum
-	dd #{ member.gocardless.minimum ? '£' + member.gocardless.minimum : '–' }
-	dt Amount
-	dd #{ member.gocardless.amount ? '£' + member.gocardless.amount : '–' }
+	dd #{ Options( 'gocardless-minimum' ) ? '£' + Options( 'gocardless-minimum' ) : '–' }
 	if member.gocardless.next_possible_charge_date
 		dt Earliest charge date
 		dd #{ moment( member.gocardless.next_possible_charge_date ).format( 'DD/MM/YYYY' ) }
