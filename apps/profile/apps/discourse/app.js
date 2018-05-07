@@ -70,7 +70,7 @@ app.post( '/link', auth.isLoggedIn, function( req, res ) {
 					if ( index > 0 || index < users.length ) {
 						Members.findOne( { "discourse.id": user.id }, function( err, member ) {
 							if ( member ) {
-								req.flash( 'warning', 'discouse-id-duplicate' );
+								req.flash( 'warning', 'discourse-id-duplicate' );
 								res.redirect( app.parent.mountpath + app.mountpath );
 							} else {
 								auth.generateActivationCode( function( code ) {
